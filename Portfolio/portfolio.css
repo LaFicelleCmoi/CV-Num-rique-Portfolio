@@ -1,0 +1,388 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.banniere-texte {
+    color: #FFFF00; /* Jaune rétro */
+    font-weight: bold;
+    text-shadow:
+        2px 2px 0px #000, /* Ombre "plate" pour effet rétro */
+        -1px -1px 0px #ff5500; /* Contour coloré */
+
+    display: inline-block;
+    margin: 10px;
+    font-family: 'Press Start 2P', cursive; /* Police pixelisée */
+    line-height: 1.2;
+   
+    letter-spacing: 1px; /* Espacement entre les lettres */
+}
+
+body {
+  font-family: "Press Start 2P", monospace; /* Police rétro type "jeu vidéo" */
+  background: linear-gradient(135deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
+
+/* Header style jeu vidéo */
+header {
+  background: #222;
+  padding: 1rem;
+  border-bottom: 4px solid #ffcc00;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav h1 {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  text-shadow: 2px 2px #000;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #ff0066;
+  border-radius: 5px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+header nav a:hover {
+  transform: scale(1.1);
+  background: #ffcc00;
+  color: #222;
+}
+
+/* Sections */
+section {
+  min-height: 100vh; /* effet "écran de jeu" */
+  padding: 3rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffcc00;
+  text-shadow: 2px 2px #000;
+}
+
+/* About - CERCLE ADAPTATIF */
+#about {
+  position: relative;
+}
+
+#about img {
+  max-width: 150px; /* Taille maximale */
+  width: 20vw; /* S'adapte à la largeur de l'écran */
+  height: auto; /* Maintient les proportions */
+  aspect-ratio: 1 / 1; /* Garantit un ratio carré */
+  border-radius: 50%;
+  border: 4px solid #ffcc00;
+  margin-bottom: 1rem;
+  object-fit: cover; /* Évite la déformation */
+}
+
+/* Conteneur pour le cercle animé */
+.photo-container {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Cercle qui s'adapte à la photo */
+.photo-container::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 2px solid #ff0066;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+/* Animation pulsation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Skills style badges */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skills-list li {
+  background: #222;
+  border: 2px solid #ffcc00;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  color: #ffcc00;
+  font-weight: bold;
+  box-shadow: 2px 2px #000;
+}
+
+/* Projects style cartes */
+.project-card {
+  background: #ff0066;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 5px 5px #05e8af;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #222;
+  color: #ffcc00;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project-card a:hover {
+  background: #ffcc00;
+  color: #222;
+}
+
+/* Contact */
+#contact a {
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  padding: 1rem;
+  text-align: center;
+  border-top: 4px solid #ffcc00;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+}
+/* --- TIMELINE --- */
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  padding: 40px 0;
+  width: 70%;
+}
+
+/* Barre jaune centrale */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: yellow;
+  z-index: 0;
+}
+
+/* Chaque élément de la timeline */
+.timeline-item {
+  position: relative;
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Bloc rouge */
+.timeline-content {
+  position: relative;
+  z-index: 1; /* Toujours au-dessus de la barre jaune */
+  background: #ff0066;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0px #000;
+  width: 60%; /* Largeur des rectangles */
+  text-align: left;
+}
+
+/* --- Animation --- */
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Section Formation */
+#formation {
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  text-align: center;
+
+  /* 🎨 monospace; /* Police rétro type "jeu vidéo" */
+  color: #ffcc00;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+#formation h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #000;
+}
+
+/* Ligne centrale style rétro */
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #ffcc00;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px #ffcc00;
+}
+
+/* Cartes diplômes */
+#formation .timeline-content {
+  background: #ff0066;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0px #000;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#formation .timeline-content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px #000;
+}
+
+/* Titres */
+#formation .timeline-content h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Texte */
+#formation .timeline-content p {
+  font-size: 0.8rem;
+  font-family: Arial, sans-serif;
+}
+/* Bouton retour en haut - Style Rétro */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: 3px solid #000;
+  outline: none;
+  background-color: #ff1e56; /* Rose rétro */
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 5px; /* Moins arrondi pour un look pixelisé */
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3); /* Ombre "plate" pour un effet rétro */
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  font-family: 'Press Start 2P', cursive; /* Police pixelisée */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#backToTop:hover {
+  background-color: #ff7e5f; /* Orange rétro */
+  transform: scale(1.05);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+/* Réinitialisation des marges et padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
