@@ -32,22 +32,3 @@ Le portfolio est organisé en plusieurs sections principales accessibles via une
 | 🖼️ **Assets (images, PDF)** | Photo de profil, CV et icônes |
 | 🧩 **IntersectionObserver API** | Animation fluide des sections au défilement |
 
----
-
-## 🧱 Structure du projet
-
-portfolio/
-│
-├── Portfolio.html # Page principale du site
-├── portfolio.css # Feuille de style principale
-├── java.js # Script JavaScript (interactions et animations)
-│
-├── assets/
-│ ├── Photo.png # Photo de profil
-│ ├── CV.pdf # CV téléchargeable
-│
-├── Pré-MSc.html # Page dédiée à la formation EPITECH
-├── bts-ciel.html # Page détaillant le BTS CIEL
-├── bac-pro.html # Page détaillant le Bac Pro SN
-│
-└── README.md # Documentation du projet
