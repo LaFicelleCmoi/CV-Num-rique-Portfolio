@@ -16,10 +16,6 @@ Ce projet a été conçu pour présenter mon parcours, mes compétences et mes r
 
 L'objectif est de démontrer mes capacités techniques en **intégration web** (HTML/CSS) et en **scripting** (JavaScript) sans utiliser de framework lourd, pour une performance optimale et une maîtrise totale du code.
 
-## 📸 Aperçu
-
-*(Ajoute ici une capture d'écran de ton site si tu le souhaites, par exemple : `![Aperçu](assets/preview.png)`) - Sinon, supprime cette ligne.*
-
 ---
 
 ## ✨ Fonctionnalités Clés
